@@ -1,0 +1,24 @@
+{
+  "name": "electron-filesystem-prompt-example",
+  "version": "1.0.0",
+  "description": "An example repo showcasing Electron's lack of a permission prompt for FiileSystem writes",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RangerMauve/electron-filesystem-prompt-example.git"
+  },
+  "author": "rangermauve <ranger@mauve.moe> (https://mauve.moe/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RangerMauve/electron-filesystem-prompt-example/issues"
+  },
+  "homepage": "https://github.com/RangerMauve/electron-filesystem-prompt-example#readme",
+  "dependencies": {
+    "electron": "^12.0.2"
+  }
+}

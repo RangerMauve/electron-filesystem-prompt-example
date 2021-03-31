@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<title>Electron Filesystem Permmissions Test</title>
+<style>
+  html {
+    background: white;
+  }
+</style>
+<h1>Please choose a file when prompted</h1>
+<button>Click to start</button>
+
+<p>
+  You should se the following error in devtools:
+  <pre>
+  Uncaught (in promise) DOMException: The request is not allowed by the user agent or the platform in the current context.
+  </pre>
+</p>
+
+<script type="module">
+  document.querySelector('button').addEventListener('click', async () => {
+
+  // Choose a file on your FS
+	const [fileHandle] = await window.showOpenFilePicker();
+
+  // This will throw an error on Electron 12
+  const writable = await fileHandle.createWritable();
+
+    // This will never be reached
+    alert('It works now!')
+  })
+</script>
